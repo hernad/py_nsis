@@ -1,10 +1,10 @@
 !define PRODUCT_NAME "Flask2Py"
-!define PRODUCT_VERSION "1.1.0"
+!define PRODUCT_VERSION "1.2.0"
 !define PY_VERSION "3.10.6"
 !define PY_MAJOR_VERSION "3.10"
 !define BITNESS "64"
 !define ARCH_TAG ".amd64"
-!define INSTALLER_NAME "Flask2Py_1.1.0.exe"
+!define INSTALLER_NAME "Flask2Py_1.2.0.exe"
 
 ; Marker file to tell the uninstaller that it's a user installation
 !define USER_INSTALL_MARKER _user_install_marker

@@ -30,7 +30,16 @@ def isOpen(ip,port):
 
 def web_open():
     print("otvaram")
-    webbrowser.open("http://localhost:5000/hello")
+    webbrowser.open_new_tab("http://localhost:5000/hello")
+
+
+def web_open_pdf():
+    print("otvaram pdf")
+    #webbrowser.open("file:///C:/Users/ernad.husremovic.SA/Downloads/9781801070119-PYTHON_FOR_GEEKS.pdf")
+    webbrowser.open_new_tab("file:///C:/Users/ernad.husremovic.SA/Downloads/9781801070119-PYTHON_FOR_GEEKS.pdf")
+
+
+
 
 def serve_app():
     global already_open
@@ -48,11 +57,14 @@ if __name__ == '__main__':
     print(sys.version)
     threads = Thread( target= serve_app)
     thread = Thread(target = web_open)
+    thread2 = Thread(target = web_open_pdf)
     threads.start()
 
     sleep(1)
     if not already_open:
+        thread2.start()
         thread.start()
+        
 
      
     
